@@ -16,7 +16,12 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue){
+        
+        let sourceViewController = sender.source as!ThirdViewController
+        title = sourceViewController.textField.text
         
         print("This is unwind")
     }
